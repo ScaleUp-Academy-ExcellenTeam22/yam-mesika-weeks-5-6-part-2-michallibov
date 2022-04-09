@@ -8,7 +8,7 @@ def find_word_in_list_or_set(iterable):
     :param iterable: a list or a set of words from the file 'words.txt' that we recieved from the average_runtime
     function.
     """
-    # The res variable is just to prevent a warning that the statement has no effect
+    # The res variable is just to prevent a warning that the statement has no effect. 
     res = [word for _ in range(1, 1000) for word in iterable if word == "zwitterion"]
 
 
