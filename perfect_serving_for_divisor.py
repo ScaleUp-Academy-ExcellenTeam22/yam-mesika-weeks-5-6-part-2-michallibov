@@ -9,7 +9,9 @@ def find_perfect_serving():
     # The number we want to check if it's divisor's sum equals to it.
     number_of_serving = 1
     while True:
-        sum_of_divisors = sum(serving_divisor for serving_divisor in range(1, number_of_serving-1) if number_of_serving % serving_divisor == 0)
+        # Sum all the divisors of a serving.
+        sum_of_divisors = sum(serving_divisor for serving_divisor in range(1, number_of_serving-1) 
+                              if number_of_serving % serving_divisor == 0)
         # The result variable is just to prevent a warning that the statement has no effect.
         result = [(yield number_of_serving) if sum_of_divisors == number_of_serving else 0]
         number_of_serving += 1
